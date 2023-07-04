@@ -6,3 +6,9 @@ function checkPassword() {
         document.getElementById("message").textContent = "Sorry, the password you entered is incorrect.";
     }
 }
+
+function checkEnter(event) {
+    if (event.keyCode === 13) {
+        checkPassword();
+    }
+}
