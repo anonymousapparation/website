@@ -2,24 +2,22 @@ function checkPassword() {
     var enteredPassword = document.getElementById("passwordInput").value;
     var message = document.getElementById("message");
 
-    if (enteredPassword === "password") {
-        var output = "You entered the correct '" + enteredPassword + "', congratulations! ";
-        output += "This is the additional sentence on a new line.";
-        typeOutText(output, message);
+    if (enteredPassword === "crime") {
+        var sentence = "A dark crime has been committed. You have been tasked to solve it if you choose to accept. Meet me by the bfhhwbe ewhfuwe gfywegf gguyy";
+        typeOutText(sentence, message);
     } else {
-        var output = "Sorry, the password you entered is incorrect.";
-        typeOutText(output, message);
+        var sentence = "DUDE WTF";
+        typeOutText(sentence, message);
     }
 }
 
-function typeOutText(output, element) {
+function typeOutText(sentence, element) {
     element.textContent = ""; // Clear the existing content
-
-    var words = output.split(" ");
+    var words = sentence.split(" ");
     var i = 0;
-
+  
     var timer = setInterval(function() {
-        element.innerHTML += words[i] + " ";
+        element.textContent += words[i] + " ";
         i++;
         if (i >= words.length) {
             clearInterval(timer);
