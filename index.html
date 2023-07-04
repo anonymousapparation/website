@@ -2,16 +2,37 @@
 <html>
 <head>
     <title>Password Check</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        input {
+            background-color: black;
+            color: lime;
+            border: none;
+            border-bottom: 1px solid lime;
+            padding: 5px;
+            font-family: monospace;
+            outline: none;
+            margin-bottom: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div id="terminal">
-        <p id="command-line">Enter password:</p>
-        <form id="password-form">
-            <input type="password" name="password" id="password-input">
-            <input type="submit" style="display: none;">
-        </form>
-    </div>
+    <input type="password" id="passwordInput" placeholder="Enter password" onkeydown="checkEnter(event)">
+    <p id="message"></p>
 
     <script src="script.js"></script>
 </body>
