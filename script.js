@@ -7,8 +7,11 @@ function checkPassword() {
     }
 }
 
-function checkEnter(event) {
-    if (event.keyCode === 13) {
-        checkPassword();
-    }
-}
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("passwordInput").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            checkPassword();
+        }
+    });
+});
