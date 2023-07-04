@@ -1,13 +1,14 @@
 function checkPassword() {
     var enteredPassword = document.getElementById("passwordInput").value;
     var message = document.getElementById("message");
-    
-    if (enteredPassword === "crime") {
-        var sentence = "A dark crime has been committed. You have been tasked to solve it if you choose to accept. A dark crime has been committed. You have been tasked to solve it if you choose to accept. A dark crime has been committed. You have been tasked to solve it if you choose to accept. A dark crime has been committed. You have been tasked to solve it if you choose to accept.";
-        typeOutText(sentence, message);
+
+    if (enteredPassword === "password") {
+        var output = "You entered the correct '" + enteredPassword + "', congratulations! ";
+        output += "This is the additional sentence on a new line.";
+        typeOutText(output, message);
     } else {
-        var sentence = "DUDE WTF";
-        typeOutText(sentence, message);
+        var output = "Sorry, the password you entered is incorrect.";
+        typeOutText(output, message);
     }
 }
 
@@ -30,5 +31,4 @@ function checkEnter(event) {
     if (event.keyCode === 13) {
         checkPassword();
     }
-}
 }
