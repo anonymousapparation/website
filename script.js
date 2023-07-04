@@ -1,9 +1,11 @@
 function checkPassword() {
     var enteredPassword = document.getElementById("passwordInput").value;
+    var message = document.getElementById("message");
+    
     if (enteredPassword === "password") {
-        document.getElementById("message").textContent = "Congratulations! You entered the correct password.";
+        message.textContent = "You entered the correct '" + enteredPassword + "', congratulations!";
     } else {
-        document.getElementById("message").textContent = "Sorry, the password you entered is incorrect.";
+        message.textContent = "Sorry, the password you entered is incorrect.";
     }
 }
 
