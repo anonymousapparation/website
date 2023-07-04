@@ -3,7 +3,7 @@ function checkPassword() {
     var message = document.getElementById("message");
 
     if (enteredPassword === "crime") {
-        var sentence = "A dark crime has been committed. You have been tasked to solve it if you choose to accept. Meet me by the bfhhwbe ewhfuwe gfywegf gguyy";
+        var sentence = "A dark crime has been committed. You have been tasked to solve it if you choose to accept. Meet me by the bfhhwbe ewhfuwe gfywegf gguyy erh rygyregfyue yef e fefuyf efyyfhe fyfyefw fyfyew fyeff ewf uyfyefg fyewgfegfe fegfe fyw fywefh wefwe fuew";
         typeOutText(sentence, message);
     } else {
         var sentence = "DUDE WTF";
