@@ -2,7 +2,7 @@ function checkPassword() {
     var enteredPassword = document.getElementById("passwordInput").value;
     var message = document.getElementById("message");
 
-    if (enteredPassword === "crime" or enteredPassword === "Crime") {
+    if (enteredPassword === "crime" || enteredPassword === "Crime") {
         var sentence = "A dark crime has been committed. You have been tasked to solve it if you choose to accept. Meet me by the bfhhwbe ewhfuwe gfywegf gguyy erh rygyregfyue yef e fefuyf efyyfhe fyfyefw fyfyew fyeff ewf uyfyefg fyewgfegfe fegfe fyw fywefh wefwe fuew";
         typeOutText(sentence, message);
     } else {
