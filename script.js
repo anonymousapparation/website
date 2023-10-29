@@ -11,7 +11,6 @@ function checkPassword() {
     }
 }
 
-
 function typeOutText(sentence, element) {
     element.innerHTML = ""; // Clear the existing content
     element.textContent = "";
