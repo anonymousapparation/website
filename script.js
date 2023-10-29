@@ -16,19 +16,26 @@ function typeOutText(sentence, element) {
     element.textContent = "";
     var words = sentence.split(" ");
     var i = 0;
-  
+
     var timer = setInterval(function() {
-        if (words[i] === "this") {
-            element.innerHTML += `<a href="https://anonymousapparation.github.io/website1/" target="_blank">this</a> `;
-        } else {
-            element.textContent += words[i] + " ";
-        }
-        i++;
-        if (i >= words.length) {
+        if (i === words.length) {
             clearInterval(timer);
+        } else {
+            var word = words[i];
+            if (word.toLowerCase() === "this") {
+                var link = document.createElement("a");
+                link.textContent = word;
+                link.href = "https://anonymousapparation.github.io/website1/"; // Replace with the URL you want
+                element.appendChild(link);
+            } else {
+                element.appendChild(document.createTextNode(word));
+            }
+            element.appendChild(document.createTextNode(" "));
+            i++;
         }
     }, 100); // Adjust the typing speed by changing the delay (in milliseconds)
 }
+
 
 function checkEnter(event) {
     if (event.keyCode === 13) {
