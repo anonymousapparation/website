@@ -11,6 +11,7 @@ function checkPassword() {
     }
 }
 
+
 function typeOutText(sentence, element) {
     element.innerHTML = ""; // Clear the existing content
     element.textContent = "";
@@ -25,8 +26,15 @@ function typeOutText(sentence, element) {
             if (word.toLowerCase() === "this") {
                 var link = document.createElement("a");
                 link.textContent = word;
-                link.href = "https://anonymousapparation.github.io/website1/"; // Replace with the URL you want
+                link.href = "https://anonymousapparation.github.io/website1/"; // Replace with the URL you want for "this"
+                link.target = "_blank";
                 element.appendChild(link);
+            } else if (word.toLowerCase() === "here") {
+                var link1 = document.createElement("a");
+                link1.textContent = word;
+                link1.href = "https://anonymousapparation.github.io/website2/"; // Replace with the URL you want for "here"
+                link1.target = "_blank";
+                element.appendChild(link1);
             } else {
                 element.appendChild(document.createTextNode(word));
             }
@@ -35,7 +43,6 @@ function typeOutText(sentence, element) {
         }
     }, 100); // Adjust the typing speed by changing the delay (in milliseconds)
 }
-
 
 function checkEnter(event) {
     if (event.keyCode === 13) {
