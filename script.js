@@ -29,7 +29,7 @@ function typeOutText(sentence, element) {
                 link.href = "https://anonymousapparation.github.io/website1/"; // Replace with the URL you want for "this"
                 link.target = "_blank";
                 element.appendChild(link);
-            } else if (word.toLowerCase() === "here") {
+            } else if (word.toLowerCase() === "here.") {
                 var link1 = document.createElement("a");
                 link1.textContent = word;
                 link1.href = "https://anonymousapparation.github.io/website2/"; // Replace with the URL you want for "here"
